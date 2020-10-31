@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Contact Us Form</title>
+	<title>Learning Livewire</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,19 +12,25 @@
 
 	<livewire:styles />
 
+	<style>
+		html {
+			font-size: 1em;
+		}	
+	</style>
+
 </head>
 <body>	
 	<div class="container">
 
 		<livewire:scripts />
+
+		<br><br><hr><br><br>
 		
+		<livewire:search />
+
 		<br><br><hr><br><br>
 
 		<livewire:contact-us />
-
-		<br><br><hr><br><br>
-		
-		{{-- <livewire:contact-us /> --}}
 
 		<br><br><hr><br><br>
 
