@@ -47,6 +47,10 @@
 			@endforeach
 		</div>
 
+		<br><br><hr><br><br>
+
+		<livewire:poll />
+		
 
 
 
