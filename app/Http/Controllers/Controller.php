@@ -7,6 +7,7 @@ use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Routing\Controller as BaseController;
 use App\User;
+use App\Post;
 
 class Controller extends BaseController
 {
@@ -14,6 +15,8 @@ class Controller extends BaseController
 
     public function home()
     {
-        return view('home');
+        return view('home', [
+            'posts' => Post::all()
+        ]);
     }
 }

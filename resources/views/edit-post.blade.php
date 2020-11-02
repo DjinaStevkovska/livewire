@@ -10,8 +10,8 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 	<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
-	<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
-	<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.7.3/dist/alpine.min.js" defer></script>
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.7.3/dist/alpine.min.js" defer></script>
 
 	<livewire:styles />
 
@@ -22,43 +22,8 @@
 	</style>
 
 </head>
-<body>	
-	<div class="container">
+<body>
+    <livewire:scripts />
 
-		<livewire:scripts />
-
-		<br><br><hr><br><br>
-		
-		<livewire:search />
-
-		<br><br><hr><br><br>
-
-		<livewire:contact-us />
-
-		<br><br><hr><br><br>
-
-		<livewire:data-table />
-		
-		<br><br><hr><br><br>
-
-					
-		<div class="w-50 mx-auto">
-			@foreach ($posts as $post)
-				<h2><a href="post/{{$post->id}}">{{ $post->title }}</a></h2>
-				<p>{{ $post->content }}</p>
-				<p><a href="post/{{$post->id}}/edit">Edit</a></>
-			@endforeach
-		</div>
-
-		<br><br><hr><br><br>
-
-		<livewire:poll />
-		
-
-
-
-
-    </div>
-	
-</body>	
-</html>
+    <livewire:post-edit :post="$post"/>  
+</body>
