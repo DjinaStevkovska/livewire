@@ -20,38 +20,17 @@
 	</style>
 
 </head>
-<body>	
-	<div class="container">
+<body>
+    <livewire:scripts />
 
-		<livewire:scripts />
+    <div class="w-50 mx-auto">
+        <h2>{{ $post->title }}</h2>
+        <p>{{ $post->content }}</p>
 
-		<br><br><hr><br><br>
-		
-		<livewire:search />
-
-		<br><br><hr><br><br>
-
-		<livewire:contact-us />
-
-		<br><br><hr><br><br>
-
-		<livewire:data-table />
-		
-		<br><br><hr><br><br>
-
-					
-		<div class="w-50 mx-auto">
-			@foreach ($posts as $post)
-				<h2><a href="post/{{$post->id}}">{{ $post->title }}</a></h2>
-				<p>{{ $post->content }}</p>	
-			@endforeach
-		</div>
-
-
-
-
-
+    <hr>
     </div>
-	
-</body>	
-</html>
+    
+    <livewire:comments :post="$post" />
+    
+    
+</body>
