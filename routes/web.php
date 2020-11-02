@@ -1,5 +1,6 @@
 <?php
 
+use App\User;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,6 +19,7 @@ Route::get('/', function () {
 });
 
 Route::get('/home', 'Controller@home');
+
 
 // Route::post('/contact-us', 'ContactUsController@send_contact_form');
 //['as'=>'contactus.store','uses'=>'ContactUsController@send_contact_form']);
